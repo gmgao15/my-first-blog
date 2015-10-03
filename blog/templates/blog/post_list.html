@@ -6,14 +6,14 @@
 <div>
 	<h1><a href="">Django Girls Blog</a></h1>
 </div>
+{% for post in posts %}
 <div>
-		<p>published: 3.10.2015, 1:28pm</p>
-		<h2><a href="">My first post</a></h2>
-		<p>Bacon ipsum dolor amet chicken beef ham hock turducken jowl, corned beef kevin sirloin shank kielbasa andouille capicola ground round rump ribeye. Rump turkey cupim, picanha drumstick alcatra turducken tail filet mignon. Pork jowl shoulder, pork chop filet mignon pork loin flank salami frankfurter ham hock kielbasa jerky corned beef short ribs. Shoulder cupim porchetta, venison doner turkey meatloaf. Chuck pork short ribs, jerky porchetta fatback beef ribs. Ribeye flank pig tenderloin kevin hamburger ham hock chuck porchetta. Shank jerky t-bone short loin cow hamburger tail ham hock frankfurter pork belly fatback.</p>
-		<p>published: 3.10.2015, 1:30pm</p>
-		<h2><a href="">My second post</a></h2>
-		<p>Bacon ipsum dolor amet chicken beef ham hock turducken jowl, corned beef kevin sirloin shank kielbasa andouille capicola ground round rump ribeye. Rump turkey cupim, picanha drumstick alcatra turducken tail filet mignon. Pork jowl shoulder, pork chop filet mignon pork loin flank salami frankfurter ham hock kielbasa jerky corned beef short ribs. Shoulder cupim porchetta, venison doner turkey meatloaf. Chuck pork short ribs, jerky porchetta fatback beef ribs. Ribeye flank pig tenderloin kevin hamburger ham hock chuck porchetta. Shank jerky t-bone short loin cow hamburger tail ham hock frankfurter pork belly fatback.</p>
+	<p>published: {{ post.published_date }} </p>
+	<h1><a href="">{{ post.title }}</a></h1>
+	<p>{{ post.text|linebreaks }}</p>
+
 	</div>
-	
+	{% endfor %}
+
 </body>
 </html>
